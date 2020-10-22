@@ -19,7 +19,7 @@ function sass() {
 		html: 'http://starter.spip'
 	};
 	return (
-		src('css/**/*.scss')
+		src('CSS/**/*.scss')
 			.pipe(sourcemaps.init())
 			.pipe(gulpSass({ outputStyle: 'expanded' }))
 			.on('error', err => notify().write(err))
@@ -27,7 +27,7 @@ function sass() {
 			//		.pipe(postcss([autoprefixer(), cssnano()])) // autoprefixer  +  minifier
 			//		.pipe(postcss([unuse(options_unuse), autoprefixer()])) // css unuse + autoprefixer
 			.pipe(sourcemaps.write('.')) // initialize sourcemaps first
-			.pipe(dest('css'))
+			.pipe(dest('CSS'))
 	);
 }
 
@@ -68,7 +68,7 @@ function jsBabel() {
  * Les Watchers
  */
 function watcherSass() {
-	watch('css/**/*.scss', { ignoreInitial: false }, sass).on('change', function() {
+	watch('CSS/**/*.scss', { ignoreInitial: false }, sass).on('change', function() {
 		notify('CSS -> SCSS ==> OK').write('');
 	});
 }

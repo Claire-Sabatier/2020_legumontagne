@@ -1,0 +1,35 @@
+div.filtre_vert {
+  background-color: #4e6131;
+}
+
+div.cadre_jaune_menu {
+  background-color: #f9d013;
+}
+
+@font-face {
+  font-family: 'Vegur';
+  src: url("../fonts/Vegur-Regular-webfont.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VegurBold';
+  src: url("../fonts/Vegur-Bold-webfont.woff");
+  font-weight: bold;
+}
+
+body {
+  font-family: Vegur;
+}
+
+.menu1, .menu2 {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.menu2 {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+/*# sourceMappingURL=scss_index.css.map */
