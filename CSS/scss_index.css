@@ -1,9 +1,57 @@
-div.filtre_vert {
-  background-color: #4e6131;
+/* reset.css*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-div.cadre_jaune_menu {
-  background-color: #f9d013;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*code*/
+div.filtre_vert {
+  background-color: #4e6131;
 }
 
 @font-face {
@@ -22,14 +70,509 @@ body {
   font-family: Vegur;
 }
 
-.menu1, .menu2 {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+/* mobile first */
+.menus {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
-.menu2 {
-  -ms-flex-pack: end;
-      justify-content: flex-end;
+.menus .menu2, .menus .menu1 {
+  text-align: center;
+}
+
+.menus a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.txt_sous_logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.txt_sous_logo h1 {
+  color: white;
+}
+
+.banniere_tri_partie {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+}
+
+.banniere_tri_partie a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.banniere_tri_partie .cadre_jaune_menu {
+  background-color: #f9d013;
+  margin: 0;
+  padding: 0;
+}
+
+.banniere_tri_partie .cadre_vert_menu {
+  background-color: #3AA803;
+  margin: 0;
+  padding: 0;
+}
+
+.banniere_tri_partie div {
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+}
+
+.banniere_tri_partie .image {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.banniere_tri_partie .image img {
+  height: 100%;
+}
+
+.actualites .grd_image {
+  width: 200px;
+  height: 164px;
+  margin: 0;
+  padding: 0;
+}
+
+.actualites .grd_image img {
+  height: 100%;
+}
+
+.actualites .row {
+  display: -ms-flexbox;
+  display: flex;
+  height: 20px;
+}
+
+.actualites .row .cadre_vert {
+  background-color: #3AA803;
+  width: 206px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.actualites .row .cadre_jaune {
+  background-color: #f9d013;
+  width: 207px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.actualites .liste_actu .espace_vide {
+  height: 30px;
+}
+
+.actualites .liste_actu .actu_legumes .grand_titre, .actualites .liste_actu .actu_pain .grand_titre {
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15%;
+}
+
+.actualites .liste_actu .actu_legumes .grand_titre .titre, .actualites .liste_actu .actu_pain .grand_titre .titre {
+  font-weight: bold;
+}
+
+.actualites .liste_actu .actu_legumes .grand_titre .titre h2, .actualites .liste_actu .actu_pain .grand_titre .titre h2 {
+  padding-top: 15%;
+}
+
+.actualites .liste_actu .actu_legumes .article1, .actualites .liste_actu .actu_legumes .article2, .actualites .liste_actu .actu_legumes .article3, .actualites .liste_actu .actu_pain .article1, .actualites .liste_actu .actu_pain .article2, .actualites .liste_actu .actu_pain .article3 {
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15%;
+  font-weight: bold;
+  padding-right: 20%;
+}
+
+.actualites .liste_actu .actu_legumes .article1 .txt .texte_actu, .actualites .liste_actu .actu_legumes .article2 .txt .texte_actu, .actualites .liste_actu .actu_legumes .article3 .txt .texte_actu, .actualites .liste_actu .actu_pain .article1 .txt .texte_actu, .actualites .liste_actu .actu_pain .article2 .txt .texte_actu, .actualites .liste_actu .actu_pain .article3 .txt .texte_actu {
+  padding-left: 5%;
+}
+
+.actualites .grand_espace_vide {
+  height: 80px;
+}
+
+.producteur {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.producteur .bande_verte_txt {
+  background-color: #3AA803;
+}
+
+.producteur .bloc1 .espace_vide {
+  height: 30px;
+}
+
+.producteur .bloc1 .jacques .cadre_vert_titre {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 4px;
+  text-align: center;
+  background-color: #3AA803;
+  font-size: 23px;
+  font-weight: bold;
+  height: 30px;
+}
+
+.producteur .bloc1 .jacques .img-producteur {
+  margin-top: 15px;
+  padding-left: 10%;
+}
+
+.producteur .bloc1 .jacques p {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.producteur .bloc1 .car_legume #carousel_legume {
+  margin-top: 5%;
+  margin-left: 4%;
+  text-align: center;
+}
+
+.producteur .bloc1 .car_legume #carousel_legume img {
+  width: 88%;
+  height: auto;
+}
+
+.producteur .bloc1 .car_legume #carousel_legume h5 {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  margin-left: 6%;
+  margin-right: 6%;
+  background-color: #3AA803;
+}
+
+.pain {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.pain .bande_jaune_txt {
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin-top: 15%;
+  background-color: #f9d013;
+}
+
+.pain .bande_jaune_txt img {
+  padding-left: 5%;
+}
+
+.pain .jean .cadre_jaune_titre {
+  margin-top: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 4px;
+  text-align: center;
+  background-color: #f9d013;
+  font-size: 23px;
+  font-weight: bold;
+  height: 30px;
+}
+
+.pain .jean .img-producteur {
+  margin-top: 5%;
+  padding-left: 10%;
+}
+
+.pain .jean p {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 8%;
+}
+
+.pain .espace_vide {
+  height: 30px;
+}
+
+.pain .car_pain #carousel_pain {
+  margin-top: 5%;
+  margin-left: 4%;
+  text-align: center;
+}
+
+.pain .car_pain #carousel_pain img {
+  width: 88%;
+  height: auto;
+}
+
+.pain .car_pain #carousel_pain h5 {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  margin-left: 6%;
+  margin-right: 6%;
+  background-color: #f9d013;
+}
+
+.img-nous-trouver .row {
+  margin-top: 15%;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+}
+
+.img-nous-trouver .row .cadre_vert {
+  background-color: #3AA803;
+  width: 206px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.img-nous-trouver .row .cadre_jaune {
+  background-color: #f9d013;
+  width: 207px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.img-nous-trouver .espace_vide {
+  height: 30px;
+}
+
+.img-nous-trouver .trouver h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.img-nous-trouver .trouver p {
+  margin-left: 10%;
+}
+
+.img-nous-trouver .trouver b {
+  font-weight: bold;
+}
+
+.img-nous-trouver .plan {
+  margin-top: 5%;
+  margin-left: 7%;
+}
+
+.img-nous-trouver .plan img {
+  width: 88%;
+  height: auto;
+}
+
+.img-nous-trouver .barre_couleur {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+  margin-top: 5%;
+}
+
+.img-nous-trouver .barre_couleur .cadre_vert_bas {
+  background-color: #3AA803;
+  height: 30px;
+  width: 206px;
+}
+
+.img-nous-trouver .barre_couleur .cadre_jaune_bas {
+  background-color: #f9d013;
+  height: 30px;
+  width: 206px;
+}
+
+footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-color: #3AA803;
+  text-align: center;
+}
+
+footer .espace_vide {
+  height: 10px;
+}
+
+footer .btn {
+  margin-bottom: 10%;
+}
+
+/* version pc */
+@media screen and (min-width: 900px) {
+  .menus {
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+  .menus .menu1 {
+    padding-right: 3%;
+  }
+  .menus .menu2 {
+    padding-right: 5%;
+  }
+  .banniere_tri_partie div {
+    width: 800px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 45px;
+  }
+  .banniere_tri_partie .image {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  .actualites .grd_image {
+    width: 900px;
+    height: 500px;
+  }
+  .actualites .row .cadre_vert {
+    width: 640px;
+  }
+  .actualites .row .cadre_jaune {
+    width: 640px;
+  }
+  .actualites .liste_actu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .actualites .liste_actu .actu_legumes .grand_titre, .actualites .liste_actu .actu_pain .grand_titre {
+    margin-left: -25px;
+  }
+  .producteur .bloc1 {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .producteur .bloc1 .jacques {
+    margin-left: 150px;
+  }
+  .producteur .bloc1 .jacques .cadre_vert_titre {
+    margin-top: 60px;
+    width: 350px;
+  }
+  .producteur .bloc1 .jacques p {
+    width: 350px;
+  }
+  .producteur .bloc1 .car_legume #carousel_legume {
+    margin-top: 0;
+  }
+  .producteur .bloc1 .car_legume #carousel_legume img {
+    width: 110%;
+    z-index: 0;
+  }
+  .producteur .bloc1 .car_legume #carousel_legume h5 {
+    z-index: 2;
+    margin-top: -110%;
+  }
+  .pain .bloc2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+  }
+  .pain .bloc2 .jean .cadre_jaune_titre {
+    margin-left: -80%;
+    width: 280px;
+  }
+  .pain .bloc2 .jean .img-producteur {
+    margin-left: -90%;
+  }
+  .pain .bloc2 .jean p {
+    margin-left: -80%;
+    width: 320px;
+  }
+  .pain .bloc2 .espace_vide {
+    height: 0px;
+  }
+  .pain .bloc2 .car_pain {
+    margin-top: -35px;
+  }
+  .pain .bloc2 .car_pain #carousel_pain {
+    margin-right: 338px;
+    margin-top: 35px;
+    margin-left: 0;
+  }
+  .pain .bloc2 .car_pain #carousel_pain img {
+    z-index: 1;
+    width: 100%;
+  }
+  .pain .bloc2 .car_pain #carousel_pain h5 {
+    z-index: 2;
+    margin-top: -105%;
+    background-color: transparent;
+  }
+  .img-nous-trouver .row .cadre_vert {
+    width: 640px;
+  }
+  .img-nous-trouver .row .cadre_jaune {
+    width: 640px;
+  }
+  .img-nous-trouver .ouTrouver {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .img-nous-trouver .ouTrouver .trouver {
+    margin-top: 60px;
+  }
+  .img-nous-trouver .ouTrouver .trouver h2 {
+    text-align: left;
+    margin-left: 10%;
+  }
+  .img-nous-trouver .ouTrouver .trouver p:nth-child(even) {
+    line-height: 32px;
+  }
+  .img-nous-trouver .barre_couleur {
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+  }
+  .img-nous-trouver .barre_couleur .cadre_vert_bas {
+    width: 640px;
+  }
+  .img-nous-trouver .barre_couleur .cadre_jaune_bas {
+    width: 640px;
+  }
+  footer {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    text-align: left;
+  }
+  footer .btn {
+    margin-top: -3%;
+    margin-left: 900px;
+  }
+  footer .mentions {
+    margin-left: 200px;
+  }
 }
 
 /*# sourceMappingURL=scss_index.css.map */
